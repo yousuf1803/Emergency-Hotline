@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Directory</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./tailwind.init.css" />
+    <style>
+      /* *{
+        border:2px solid red;
+    }
+    body{
+        border:2px dashed red;
+    } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="border border-red-500 flex justify-between items-center w-11/12 mx-auto py-3"
+      >
+        <div class="left flex items-center justify-center gap-2">
+          <div class="logo">
+            <img src="./assets/logo.png" alt="Logo" class="w-12 h-12" />
+          </div>
+          <div class="heading">
+            <p
+              class="text-[#006747] text-2xl font-bold font-madurai leading-[100%]"
+            >
+              Emergency <br />
+              Service
+            </p>
+          </div>
+        </div>
+        <div class="right flex gap-5">
+          <div>
+            <button class="btn btn-sm rounded-3xl p-4 bg-[#41ff6b1a]">
+              <span class="text-sm font-bold">0</span>
+              <img src="./assets/heart.png" alt="Heart" class="w-5 h-5" />
+            </button>
+          </div>
+          <div>
+            <button class="btn btn-sm rounded-3xl p-4 bg-[#41ff6b1a]">
+              <span class="text-sm font-bold">100</span
+              ><img src="./assets/coin.png" alt="Coin" class="w-5 h-5" />
+            </button>
+          </div>
+          <div>
+            <button
+              class="btn btn-sm text-sm rounded-3xl p-4 bg-[#00a63e] text-white"
+            >
+              <span class="text-sm font-bold">0</span>Copy
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+  </body>
+</html>
