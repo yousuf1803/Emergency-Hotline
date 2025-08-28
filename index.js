@@ -60,6 +60,20 @@ clearButton.addEventListener("click", function () {
   const historyContainer = document.getElementById("call-history-container");
   historyContainer.innerHTML = "";
 });
+// Copy Buttons Functionalities
+
+const copyButtons = document.getElementsByClassName("btn-copy");
+for (let copyButton of copyButtons) {
+  copyButton.addEventListener("click", function () {
+    const hotlineNumber =
+      copyButton.parentNode.parentNode.children[3].innerText;
+    alert(`©Helpline number copied.`);
+    const copyCount = getElement("copy-count");
+    const newCopyCount = copyCount + 1;
+    document.getElementById("copy-count").innerText = newCopyCount;
+    navigator.clipboard.writeText(hotlineNumber);
+  });
+}
 
 
 
