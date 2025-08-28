@@ -17,4 +17,43 @@ for (let heartIcon of heartIcons) {
     document.getElementById("love-count").innerText = newLoveCount;
   });
 }
+// Call Buttons Functionalities
+
+const callButtons = document.getElementsByClassName("btn-call");
+for (let callButton of callButtons) {
+  callButton.addEventListener("click", function () {
+    const serviceName = callButton.parentNode.parentNode.children[1].innerText;
+    const serviceNumber =
+      callButton.parentNode.parentNode.children[3].innerText;
+    let currentTime = new Date().toLocaleTimeString();
+
+    const coins = getElement("coin-count");
+    if (coins < 20) {
+      alert(
+        `📞You don't have enough coins.You need at least 20 coins to make a call.`
+      );
+      return;
+    }
+    alert(`📞Calling ${serviceName} ${serviceNumber}`);
+    const newCoins = coins - 20;
+    document.getElementById("coin-count").innerText = newCoins;
+    const historyContainer = document.getElementById("call-history-container");
+    const callHistory = document.createElement("div");
+    callHistory.innerHTML = `
+						<div class="flex justify-between items-center  p-2 bg-gray-100 mx-4 rounded-lg ">
+              <div>
+                <p class="font-madurai text-lg font-medium text-black">${serviceName}</p>
+                <p class="text-lg text-[#5C5C5C]">${serviceNumber}</p>
+              </div>
+              <div>
+                <p class="text-sm">${currentTime}</p>
+              </div>
+            </div>
+					`;
+    historyContainer.appendChild(callHistory);
+  });
+}
+
+
+
 
