@@ -53,6 +53,13 @@ for (let callButton of callButtons) {
     historyContainer.appendChild(callHistory);
   });
 }
+// Call History Section Functionalities
+
+const clearButton = getProduct("btn-clear");
+clearButton.addEventListener("click", function () {
+  const historyContainer = document.getElementById("call-history-container");
+  historyContainer.innerHTML = "";
+});
 
 
 
